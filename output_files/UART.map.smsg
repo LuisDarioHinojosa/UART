@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at uartTransmiter.v(32): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 32

@@ -1,5 +1,5 @@
 Flow report for UART
-Thu Mar 04 07:29:47 2021
+Thu Mar 04 18:33:21 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 04 07:29:42 2021       ;
+; Flow Status                        ; Successful - Thu Mar 04 18:33:14 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; UART                                        ;
-; Top-level Entity Name              ; uartTransmiter                              ;
+; Top-level Entity Name              ; uartReceiber                                ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2 / 49,760 ( < 1 % )                        ;
-;     Total combinational functions  ; 2 / 49,760 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 1 / 49,760 ( < 1 % )                        ;
-; Total registers                    ; 1                                           ;
-; Total pins                         ; 13 / 360 ( 4 % )                            ;
+; Total logic elements               ; 1 / 49,760 ( < 1 % )                        ;
+;     Total combinational functions  ; 1 / 49,760 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                          ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 11 / 360 ( 3 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -66,26 +66,26 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2021 07:29:18 ;
+; Start date & time ; 03/04/2021 18:32:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; UART                ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                           ;
-+-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 259881638804589.161486455716796        ; --            ; --             ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; uartTransmiter ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; uartTransmiter ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; uartTransmiter ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --             ; --         ;
-; TOP_LEVEL_ENTITY                    ; uartTransmiter                         ; UART          ; --             ; --         ;
-+-------------------------------------+----------------------------------------+---------------+----------------+------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                         ;
++-------------------------------------+----------------------------------------+---------------+--------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+--------------+------------+
+; COMPILER_SIGNATURE_ID               ; 259881638804589.161490432420400        ; --            ; --           ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --           ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --           ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; uartReceiber ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; uartReceiber ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; uartReceiber ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --           ; --         ;
+; TOP_LEVEL_ENTITY                    ; uartReceiber                           ; UART          ; --           ; --         ;
++-------------------------------------+----------------------------------------+---------------+--------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4779 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 5641 MB             ; 00:00:12                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4688 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4822 MB             ; 00:00:03                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4741 MB             ; 00:01:15                           ;
+; Fitter               ; 00:00:22     ; 1.0                     ; 5635 MB             ; 00:00:28                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 4687 MB             ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4819 MB             ; 00:00:05                           ;
+; Total                ; 00:01:10     ; --                      ; --                  ; 00:01:58                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

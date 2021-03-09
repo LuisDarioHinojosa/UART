@@ -1,9 +1,9 @@
-C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v
+C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module Transmiter_TB
+-- Compiling module uartTransmiter
 
 Top level modules:
-	Transmiter_TB
+	uartTransmiter
 
 } {} {}} C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -11,12 +11,5 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	uartReceiber
-
-} {} {}} C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module uartTransmiter
-
-Top level modules:
-	uartTransmiter
 
 } {} {}}

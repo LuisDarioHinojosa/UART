@@ -1,7 +1,7 @@
 
 
 module uartTransmiter 
-    #(parameter CLKS_PER_BIT = 5208)
+    #(parameter CLKS_PER_BIT)
     (
         input       clk, //  clock
         input       dataValid, // data valid

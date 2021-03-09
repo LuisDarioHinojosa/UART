@@ -9,110 +9,110 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1/Leonel/Gummut
 vTransmiter_TB
-Z0 !s110 1614907181
+!s110 1615258633
 !i10b 1
-!s100 131RD?XWm0;e:B6N]omE00
-IR]L?N7`ZKnIO_kZY6QEc31
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/intelFPGA_lite/18.1/Gallo/UART
-w1614907177
-Z3 8C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v
-Z4 FC:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v
-L0 4
-Z5 OV;L;10.5b;63
+!s100 HSQo49]FggdAmmOB[MAB80
+IiS[V[Ma82?R0:cigJ_6z@3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/intelFPGA_lite/18.1/Gallo/UART
+w1615258625
+Z2 8C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v
+Z3 FC:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v
+L0 3
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1614907181.000000
-Z7 !s107 C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v|
-Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v|
+Z5 !s108 1615258633.000000
+Z6 !s107 C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v|
+Z7 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/Gallo/UART/Transmiter_TB.v|
 !i113 1
-Z9 o-work work
-Z10 tCvgOpt 0
+Z8 o-work work
+Z9 tCvgOpt 0
 n@transmiter_@t@b
 vuart_tb
-Z11 !s110 1614899836
+Z10 !s110 1614899836
 !i10b 1
 !s100 0T]KZ7Sa2HB5aU:l_:Id80
 I6I2JWK]HF81HzXoe6=h4a0
+R0
 R1
-R2
 w1614899760
+R2
 R3
-R4
 L0 60
-R5
+R4
 r1
 !s85 0
 31
-Z12 !s108 1614899836.000000
+Z11 !s108 1614899836.000000
+R6
 R7
-R8
 !i113 1
+R8
 R9
-R10
 vuart_tx
-R11
+R10
 !i10b 1
 !s100 aM=QBagBFKf`g0]U6@32]2
 I3M4[XNAR?ECigFbT9kMKg1
+R0
 R1
-R2
 w1614899829
-Z13 8C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v
-Z14 FC:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v
+Z12 8C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v
+Z13 FC:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v
 L0 133
-R5
+R4
 r1
 !s85 0
 31
-R12
-Z15 !s107 C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v|
-Z16 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v|
+R11
+Z14 !s107 C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v|
 !i113 1
+R8
 R9
-R10
 vuartReceiber
-R0
+Z16 !s110 1615258634
 !i10b 1
-!s100 YjSkVJccETS4<gOePkNS=0
-IW^AlDPQdaNY:99_V38?^30
+!s100 8d7>[GT_Pj[;>ezc8<KAK3
+Iz@QR:2`:b@KGijndmQ2iI3
+R0
 R1
-R2
-w1614904389
+w1615219360
 8C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v
 FC:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v
 L0 2
-R5
+R4
 r1
 !s85 0
 31
-R6
+!s108 1615258634.000000
 !s107 C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v|
 !i113 1
+R8
 R9
-R10
 nuart@receiber
 vuartTransmiter
-R0
+R16
 !i10b 1
-!s100 @:i=:d5CEMOk87Bc9d;J52
-I0VnKz=O]7B79XE96SebY@1
+!s100 bBkI4j2ELS52C]c]S@25j3
+I@C1RR[hL<;@Sd>OJOS:gi2
+R0
 R1
-R2
-w1614903144
+w1615219347
+R12
 R13
-R14
 L0 3
-R5
+R4
 r1
 !s85 0
 31
-R6
+R5
+R14
 R15
-R16
 !i113 1
+R8
 R9
-R10
 nuart@transmiter

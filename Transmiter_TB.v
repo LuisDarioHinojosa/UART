@@ -1,21 +1,14 @@
 
 
-
 module Transmiter_TB ();
 
-  // Testbench uses a 10 MHz clock
-  // Want to interface to 115200 baud UART
-  // 10000000 / 115200 = 87 Clocks Per Bit.
-    parameter c_CLOCK_PERIOD_NS = 100;
-    parameter c_CLKS_PER_BIT    = 1042;
-    parameter c_BIT_PERIOD      = 8600;
+
+    parameter c_CLOCK_PERIOD_NS = 20;
+    parameter c_CLKS_PER_BIT    = 5208;
+    parameter c_BIT_PERIOD      = 104167;
     
 
-    /*
-    100
-    87
-    8600
-    */
+
     reg r_Clock = 0;
     reg r_Tx_DV = 0;
     wire w_Tx_Done;
@@ -98,4 +91,3 @@ module Transmiter_TB ();
         end
     
     endmodule
-

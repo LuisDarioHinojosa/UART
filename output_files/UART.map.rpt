@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART
-Thu Mar 04 18:32:36 2021
+Mon Mar 08 00:57:43 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,11 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |uartReceiber|STATE
+  8. State Machine - |uartTransmiter|STATE
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |uartReceiber
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |uartTransmiter
  13. Post-Synthesis Netlist Statistics for Top Partition
  14. Elapsed Time Per Partition
  15. Analysis & Synthesis Messages
@@ -46,16 +46,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 04 18:32:36 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 08 00:57:43 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; UART                                        ;
-; Top-level Entity Name              ; uartReceiber                                ;
+; Top-level Entity Name              ; uartTransmiter                              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 11                                          ;
+; Total logic elements               ; 5                                           ;
+;     Total combinational functions  ; 3                                           ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
+; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -71,7 +71,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; uartReceiber       ; UART               ;
+; Top-level entity name                                            ; uartTransmiter     ; UART               ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,75 +160,77 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; uartReceiber.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; uartTransmiter.v                 ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-;                                             ;                  ;
-; Total combinational functions               ; 0                ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 0                ;
-;     -- 3 input functions                    ; 0                ;
-;     -- <=2 input functions                  ; 0                ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 0                ;
-;     -- arithmetic mode                      ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 0                ;
-;     -- Dedicated logic registers            ; 0                ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 11               ;
-;                                             ;                  ;
-; Embedded Multiplier 9-bit elements          ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; dataValid~output ;
-; Maximum fan-out                             ; 1                ;
-; Total fan-out                               ; 11               ;
-; Average fan-out                             ; 0.50             ;
-+---------------------------------------------+------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 5         ;
+;                                             ;           ;
+; Total combinational functions               ; 3         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 0         ;
+;     -- <=2 input functions                  ; 3         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 3         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 4         ;
+;     -- Dedicated logic registers            ; 4         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 13        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 4         ;
+; Total fan-out                               ; 28        ;
+; Average fan-out                             ; 0.85      ;
++---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
-; |uartReceiber              ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |uartReceiber       ; uartReceiber ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+--------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
+; |uartTransmiter            ; 3 (3)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 13   ; 0            ; 0          ; |uartTransmiter     ; uartTransmiter ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------+
-; State Machine - |uartReceiber|STATE                                                                   ;
-+-------------------+-----------------+-----------------+-------------------+-----------+---------------+
-; Name              ; STATE.STOP_BITS ; STATE.DATA_BITS ; STATE.START_TRANS ; STATE.000 ; STATE.CLEANUP ;
-+-------------------+-----------------+-----------------+-------------------+-----------+---------------+
-; STATE.000         ; 0               ; 0               ; 0                 ; 0         ; 0             ;
-; STATE.START_TRANS ; 0               ; 0               ; 1                 ; 1         ; 0             ;
-; STATE.DATA_BITS   ; 0               ; 1               ; 0                 ; 1         ; 0             ;
-; STATE.STOP_BITS   ; 1               ; 0               ; 0                 ; 1         ; 0             ;
-; STATE.CLEANUP     ; 0               ; 0               ; 0                 ; 1         ; 1             ;
-+-------------------+-----------------+-----------------+-------------------+-----------+---------------+
++----------------------------------------------------------------------------------------------------+
+; State Machine - |uartTransmiter|STATE                                                              ;
++------------------+-----------------+----------------+------------------+-----------+---------------+
+; Name             ; STATE.STOPTRANS ; STATE.DATABITS ; STATE.STARTTRANS ; STATE.000 ; STATE.CLEANUP ;
++------------------+-----------------+----------------+------------------+-----------+---------------+
+; STATE.000        ; 0               ; 0              ; 0                ; 0         ; 0             ;
+; STATE.STARTTRANS ; 0               ; 0              ; 1                ; 1         ; 0             ;
+; STATE.DATABITS   ; 0               ; 1              ; 0                ; 1         ; 0             ;
+; STATE.STOPTRANS  ; 1               ; 0              ; 0                ; 1         ; 0             ;
+; STATE.CLEANUP    ; 0               ; 0              ; 0                ; 1         ; 1             ;
++------------------+-----------------+----------------+------------------+-----------+---------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -236,30 +238,28 @@ Encoding Type:  One-Hot
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; DATAV_FLAG                             ; Stuck at GND due to stuck port data_in ;
+; BIT_INDEX[0..2]                        ; Stuck at GND due to stuck port data_in ;
+; DATA_BACKUP[1..7]                      ; Lost fanout                            ;
 ; STATE~2                                ; Lost fanout                            ;
 ; STATE~3                                ; Lost fanout                            ;
 ; STATE.CLEANUP                          ; Stuck at GND due to stuck port data_in ;
-; r_Rx_Data                              ; Lost fanout                            ;
-; r_Rx_Data_R                            ; Lost fanout                            ;
-; STATE.000                              ; Lost fanout                            ;
-; STATE.START_TRANS                      ; Lost fanout                            ;
-; STATE.DATA_BITS                        ; Lost fanout                            ;
-; STATE.STOP_BITS                        ; Lost fanout                            ;
-; Total Number of Removed Registers = 10 ;                                        ;
+; STATE.STOPTRANS                        ; Merged with STATE.DATABITS             ;
+; DONE_WIRE                              ; Stuck at GND due to stuck port data_in ;
+; STATE.DATABITS                         ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                               ;
-+---------------+---------------------------+-----------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register        ;
-+---------------+---------------------------+-----------------------------------------------+
-; STATE~2       ; Lost Fanouts              ; STATE.000, STATE.START_TRANS, STATE.STOP_BITS ;
-; DATAV_FLAG    ; Stuck at GND              ; r_Rx_Data, r_Rx_Data_R                        ;
-;               ; due to stuck port data_in ;                                               ;
-; STATE~3       ; Lost Fanouts              ; STATE.DATA_BITS                               ;
-+---------------+---------------------------+-----------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++---------------+---------------------------+---------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                          ;
++---------------+---------------------------+---------------------------------------------------------------------------------+
+; BIT_INDEX[0]  ; Stuck at GND              ; DATA_BACKUP[6], DATA_BACKUP[5], DATA_BACKUP[4], DATA_BACKUP[3], DATA_BACKUP[2], ;
+;               ; due to stuck port data_in ; DATA_BACKUP[7]                                                                  ;
+; STATE.CLEANUP ; Stuck at GND              ; DONE_WIRE                                                                       ;
+;               ; due to stuck port data_in ;                                                                                 ;
++---------------+---------------------------+---------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -267,23 +267,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |uartReceiber ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; CLKS_PER_BIT   ; 5208  ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |uartTransmiter ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; CLKS_PER_BIT   ; 5208  ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -292,13 +292,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 11                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; boundary_port         ; 13                          ;
+; cycloneiii_ff         ; 4                           ;
+;     ENA               ; 2                           ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 4                           ;
+;     normal            ; 4                           ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -307,7 +312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -317,7 +322,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 04 18:32:04 2021
+    Info: Processing started: Mon Mar 08 00:57:31 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -335,33 +340,33 @@ Warning (10222): Verilog HDL Parameter Declaration warning at uartReceiber.v(13)
 Warning (10222): Verilog HDL Parameter Declaration warning at uartReceiber.v(14): Parameter Declaration in module "uartReceiber" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 14
 Warning (10222): Verilog HDL Parameter Declaration warning at uartReceiber.v(15): Parameter Declaration in module "uartReceiber" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 15
 Warning (10222): Verilog HDL Parameter Declaration warning at uartReceiber.v(16): Parameter Declaration in module "uartReceiber" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 16
-Info (12127): Elaborating entity "uartReceiber" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at uartReceiber.v(71): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 71
-Warning (10230): Verilog HDL assignment warning at uartReceiber.v(82): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 82
-Warning (10230): Verilog HDL assignment warning at uartReceiber.v(110): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 110
+Info (12127): Elaborating entity "uartTransmiter" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at uartTransmiter.v(58): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 58
+Warning (10230): Verilog HDL assignment warning at uartTransmiter.v(76): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 76
+Warning (10230): Verilog HDL assignment warning at uartTransmiter.v(104): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 104
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "dataValid" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 7
-    Warning (13410): Pin "Bite[0]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[1]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[2]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[3]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[4]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[5]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[6]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-    Warning (13410): Pin "Bite[7]" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 9
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "done" is stuck at GND File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 5
-    Warning (15610): No output dependent on input pin "serialStream" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartReceiber.v Line: 6
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 9 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4755 megabytes
-    Info: Processing ended: Thu Mar 04 18:32:36 2021
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:01:15
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "P_BYTE[1]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[2]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[3]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[4]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[5]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[6]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[7]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+    Warning (15610): No output dependent on input pin "P_BYTE[0]" File: C:/intelFPGA_lite/18.1/Gallo/UART/uartTransmiter.v Line: 8
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Mon Mar 08 00:57:43 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
 
 
